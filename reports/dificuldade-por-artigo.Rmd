@@ -1,0 +1,85 @@
+---
+title: "Quão difícil achamos ler esses 7 artigos?"
+output:
+    html_document:
+        code_folding: hide
+    df_print: paged
+theme: sandstone
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(here)
+library(viridis)
+library(ggbeeswarm)
+source(here::here("code/lib.R"))
+theme_set(theme_bw())
+```
+
+```{r read}
+dificuldades = read_projectdata()
+```
+
+```{r}
+dificuldades %>% 
+    count(titulo, aula) %>% 
+    ggplot(aes(x = reorder(titulo, desc(aula)), y = n)) + 
+    geom_col(width = .5, fill = "navy blue") + 
+    coord_flip() + 
+    labs(
+        x = "artigo",
+        y = "número de respostas no questionário"
+    )
+```
+
+
+```{r}
+dificuldades %>% 
+    ggplot(aes(x = reorder(titulo, aula), y = dificuldade)) + 
+    geom_jitter(width = .1, alpha = .7) + 
+    coord_flip() + 
+    labs(
+        x = "artigo",
+        y = "Quão difícil foi ler?"
+    )
+```
+
+
+```{r}
+dificuldades %>% 
+    ggplot(aes(x = dificuldade)) + 
+    geom_histogram(binwidth = 1, boundary = 0, fill = "white", color = "grey10") + 
+    facet_wrap(~ reorder(titulo, aula))
+```
+
+```{r}
+dificuldades %>% 
+    ggplot(aes(x = dificuldade)) + 
+    geom_density(fill = "salmon", color = "grey10") + 
+    facet_wrap(~ reorder(titulo, aula))
+```
+
+
+```{r}
+dificuldades %>% 
+    ggplot(aes(x = reorder(titulo, desc(aula)), y = dificuldade)) + 
+    geom_boxplot(coef = 1000, width = .4) + 
+    coord_flip() + 
+    labs(
+        x = "artigo",
+        y = "Quão difícil foi ler?"
+    )
+```
+
+```{r}
+dificuldades %>% 
+    ggplot(aes(x = reorder(titulo, desc(aula)), y = dificuldade)) + 
+    geom_boxplot(coef = 1000, width = .4) + 
+    geom_jitter(width = .2, color = "salmon", alpha = .5, height = 0.1) + 
+    coord_flip() + 
+    labs(
+        x = "artigo",
+        y = "Quão difícil foi ler?"
+    )
+```
+

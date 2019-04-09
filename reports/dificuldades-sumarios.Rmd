@@ -1,0 +1,134 @@
+---
+title: "Quão difícil achamos ler esses 7 artigos?"
+output:
+    html_document:
+        code_folding: hide
+    df_print: paged
+theme: sandstone
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(here)
+library(viridis)
+library(ggbeeswarm)
+source(here::here("code/lib.R"))
+theme_set(theme_bw())
+```
+
+```{r read}
+dificuldades = read_projectdata()
+```
+
+```{r}
+dificuldades %>% 
+    count(titulo, aula) %>% 
+    ggplot(aes(x = reorder(titulo, desc(aula)), y = n)) + 
+    geom_col(width = .5, fill = "navy blue") + 
+    coord_flip() + 
+    labs(
+        x = "artigo",
+        y = "número de respostas no questionário"
+    )
+```
+
+
+```{r}
+dificuldades %>% 
+    ggplot(aes(x = reorder(titulo, aula), y = dificuldade)) + 
+    geom_jitter(width = .1, alpha = .7) + 
+    coord_flip() + 
+    labs(
+        x = "artigo",
+        y = "Quão difícil foi ler?"
+    )
+```
+
+## Medidas de centro
+
+```{r}
+sumario = dificuldades %>% 
+    group_by(titulo) %>% 
+    summarise(media = mean(dificuldade))
+```
+
+
+```{r}
+ggplot(mapping = aes(x = titulo)) +
+    geom_jitter(data = dificuldades,
+                aes(y = dificuldade),
+                width = .1,
+                color = "grey") +
+    geom_point(data = sumario,
+               aes(y = media),
+               color = "red",
+               size = 2)
+```
+
+Reordenando os eixos:
+
+```{r}
+ggplot() +
+    geom_jitter(data = dificuldades,
+                aes(x = reorder(titulo, dificuldade, mean), y = dificuldade),
+                width = .1,
+                color = "grey") +
+    geom_point(data = sumario,
+               aes(x = titulo, y = media),
+               color = "red",
+               size = 2)
+```
+
+**Como essa visão muda com medianas?**
+
+
+## Visões baseadas em quantis
+
+```{r}
+quantis = dificuldades %>% 
+    group_by(titulo) %>% 
+    summarise(median = median(dificuldade), 
+              perc90 = quantile(dificuldade, .9))
+```
+
+
+```{r}
+dificuldades2 = dificuldades %>% 
+    left_join(quantis, by = "titulo")
+
+ggplot() +
+    geom_jitter(data = dificuldades2,
+                aes(x = reorder(titulo, perc90, mean), y = dificuldade),
+                width = .1,
+                color = "grey") +
+    geom_point(data = quantis,
+               aes(x = titulo, y = perc90),
+               color = "red",
+               size = 2)
+```
+
+
+
+
+```{r}
+dificuldades %>% 
+    ggplot(aes(x = reorder(titulo, desc(aula)), y = dificuldade)) + 
+    geom_boxplot(coef = 1000, width = .4) + 
+    geom_jitter(width = .2, color = "salmon", alpha = .5, height = 0.1) + 
+    coord_flip() + 
+    labs(
+        x = "artigo",
+        y = "Quão difícil foi ler?"
+    )
+```
+
+
+## Dispersão
+
+```{r}
+dispersoes = dificuldades %>% 
+    group_by(titulo) %>% 
+    summarise(desvio = sd(dificuldade), 
+              iqr = IQR(dificuldade), 
+              range = max(dificuldade) - min(dificuldade))
+```

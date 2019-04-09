@@ -1,0 +1,226 @@
+dificuldade,aula,ordem,titulo
+5,3,1,"lazy, not biased"
+9,3,1,"lazy, not biased"
+5,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+6,3,1,"lazy, not biased"
+6,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+2,3,1,"lazy, not biased"
+8,3,1,"lazy, not biased"
+2,3,1,"lazy, not biased"
+4,3,1,"lazy, not biased"
+9,3,1,"lazy, not biased"
+4,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+6,3,1,"lazy, not biased"
+6,3,1,"lazy, not biased"
+6,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+8,3,1,"lazy, not biased"
+4,3,1,"lazy, not biased"
+8,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+6,3,1,"lazy, not biased"
+8,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+5,3,1,"lazy, not biased"
+7,3,1,"lazy, not biased"
+9,3,1,"lazy, not biased"
+9,3,1,"lazy, not biased"
+9,3,1,"lazy, not biased"
+8,3,1,"lazy, not biased"
+3,3,1,"lazy, not biased"
+5,4,1,hypergraph models
+NA,4,1,hypergraph models
+NA,4,1,hypergraph models
+5,4,1,hypergraph models
+3,4,1,hypergraph models
+4,4,1,hypergraph models
+NA,4,1,hypergraph models
+NA,4,1,hypergraph models
+7,4,1,hypergraph models
+8,4,1,hypergraph models
+4,4,1,hypergraph models
+3,4,1,hypergraph models
+8,4,1,hypergraph models
+NA,4,1,hypergraph models
+NA,4,1,hypergraph models
+8,4,1,hypergraph models
+7,4,1,hypergraph models
+4,4,1,hypergraph models
+3,4,1,hypergraph models
+3,4,1,hypergraph models
+NA,4,1,hypergraph models
+4,4,1,hypergraph models
+8,4,1,hypergraph models
+3,4,1,hypergraph models
+NA,4,1,hypergraph models
+NA,4,1,hypergraph models
+4,4,1,hypergraph models
+7,4,1,hypergraph models
+8,4,1,hypergraph models
+7,4,2,anthropographics
+8,4,2,anthropographics
+4,4,2,anthropographics
+NA,4,2,anthropographics
+NA,4,2,anthropographics
+5,4,2,anthropographics
+4,4,2,anthropographics
+4,4,2,anthropographics
+NA,4,2,anthropographics
+6,4,2,anthropographics
+6,4,2,anthropographics
+NA,4,2,anthropographics
+8,4,2,anthropographics
+3,4,2,anthropographics
+3,4,2,anthropographics
+5,4,2,anthropographics
+6,4,2,anthropographics
+NA,4,2,anthropographics
+NA,4,2,anthropographics
+3,4,2,anthropographics
+2,4,2,anthropographics
+3,4,2,anthropographics
+7,4,2,anthropographics
+2,4,2,anthropographics
+5,4,2,anthropographics
+5,4,2,anthropographics
+NA,4,2,anthropographics
+6,4,2,anthropographics
+6,4,2,anthropographics
+NA,4,3,linux file systems
+7,4,3,linux file systems
+3,4,3,linux file systems
+1,4,3,linux file systems
+3,4,3,linux file systems
+5,4,3,linux file systems
+9,4,3,linux file systems
+7,4,3,linux file systems
+3,4,3,linux file systems
+6,4,3,linux file systems
+NA,4,3,linux file systems
+6,4,3,linux file systems
+NA,4,3,linux file systems
+5,4,3,linux file systems
+2,4,3,linux file systems
+NA,4,3,linux file systems
+NA,4,3,linux file systems
+6,4,3,linux file systems
+3,4,3,linux file systems
+3,4,3,linux file systems
+3,4,3,linux file systems
+NA,4,3,linux file systems
+NA,4,3,linux file systems
+NA,4,3,linux file systems
+6,4,3,linux file systems
+6,4,3,linux file systems
+4,4,3,linux file systems
+NA,4,3,linux file systems
+NA,4,3,linux file systems
+NA,5,1,terremotos
+7,5,1,terremotos
+NA,5,1,terremotos
+7,5,1,terremotos
+NA,5,1,terremotos
+NA,5,1,terremotos
+4,5,1,terremotos
+8,5,1,terremotos
+6,5,1,terremotos
+6,5,1,terremotos
+NA,5,1,terremotos
+7,5,1,terremotos
+5,5,1,terremotos
+8,5,1,terremotos
+5,5,1,terremotos
+8,5,1,terremotos
+8,5,1,terremotos
+6,5,1,terremotos
+NA,5,1,terremotos
+6,5,1,terremotos
+NA,5,1,terremotos
+NA,5,1,terremotos
+NA,5,1,terremotos
+4,5,1,terremotos
+5,5,1,terremotos
+4,5,1,terremotos
+7,5,1,terremotos
+7,5,1,terremotos
+7,5,1,terremotos
+6,5,1,terremotos
+NA,5,1,terremotos
+6,5,1,terremotos
+NA,5,1,terremotos
+8,5,1,terremotos
+2,5,2,CAP
+NA,5,2,CAP
+10,5,2,CAP
+7,5,2,CAP
+8,5,2,CAP
+8,5,2,CAP
+NA,5,2,CAP
+3,5,2,CAP
+NA,5,2,CAP
+5,5,2,CAP
+3,5,2,CAP
+NA,5,2,CAP
+5,5,2,CAP
+7,5,2,CAP
+NA,5,2,CAP
+4,5,2,CAP
+7,5,2,CAP
+NA,5,2,CAP
+8,5,2,CAP
+NA,5,2,CAP
+6,5,2,CAP
+6,5,2,CAP
+3,5,2,CAP
+7,5,2,CAP
+NA,5,2,CAP
+NA,5,2,CAP
+8,5,2,CAP
+9,5,2,CAP
+5,5,2,CAP
+5,5,2,CAP
+6,5,2,CAP
+4,5,2,CAP
+2,5,2,CAP
+5,5,2,CAP
+8,5,3,tensorflow
+8,5,3,tensorflow
+10,5,3,tensorflow
+NA,5,3,tensorflow
+9,5,3,tensorflow
+9,5,3,tensorflow
+7,5,3,tensorflow
+NA,5,3,tensorflow
+8,5,3,tensorflow
+NA,5,3,tensorflow
+4,5,3,tensorflow
+6,5,3,tensorflow
+5,5,3,tensorflow
+NA,5,3,tensorflow
+5,5,3,tensorflow
+NA,5,3,tensorflow
+NA,5,3,tensorflow
+6,5,3,tensorflow
+7,5,3,tensorflow
+6,5,3,tensorflow
+6,5,3,tensorflow
+6,5,3,tensorflow
+6,5,3,tensorflow
+NA,5,3,tensorflow
+3,5,3,tensorflow
+6,5,3,tensorflow
+7,5,3,tensorflow
+NA,5,3,tensorflow
+NA,5,3,tensorflow
+NA,5,3,tensorflow
+6,5,3,tensorflow
+NA,5,3,tensorflow
+4,5,3,tensorflow
+NA,5,3,tensorflow
