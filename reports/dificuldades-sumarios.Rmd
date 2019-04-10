@@ -49,16 +49,17 @@ dificuldades %>%
 ```{r}
 sumario = dificuldades %>% 
     group_by(titulo) %>% 
-    summarise(media = mean(dificuldade))
+    summarise(media = mean(dificuldade), 
+              mediana = median(dificuldade))
 ```
 
 
 ```{r}
 ggplot(mapping = aes(x = titulo)) +
-    geom_jitter(data = dificuldades,
-                aes(y = dificuldade),
-                width = .1,
-                color = "grey") +
+    # geom_jitter(data = dificuldades,
+    #             aes(y = dificuldade),
+    #             width = .1,
+    #             color = "grey") +
     geom_point(data = sumario,
                aes(y = media),
                color = "red",
@@ -74,8 +75,12 @@ ggplot() +
                 width = .1,
                 color = "grey") +
     geom_point(data = sumario,
-               aes(x = titulo, y = media),
+               aes(x = reorder(titulo, media), y = media),
                color = "red",
+               size = 2) + 
+    geom_point(data = sumario,
+               aes(x = titulo, y = mediana),
+               color = "blue",
                size = 2)
 ```
 
